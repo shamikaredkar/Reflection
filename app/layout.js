@@ -1,16 +1,11 @@
-import localFont from "next/font/local";
+import {Lora} from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Lora({
+  subsets: ['latin'], // You can specify other subsets if needed
+  weight: ['400'], // Specify the weights you want to use
+  // style: ['normal', 'italic'], // Specify the styles you want to use
+})
 
 export const metadata = {
   title: "Reflective",
@@ -18,14 +13,22 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const header = (<header className="p-4 sm:p-8 flex items-center justify-between gap-4">
+    <h1 className={'text-base sm:text-lg textGradient ' + inter.className}>reflection</h1>
+
+  </header>)
+
+  const footer = (<footer className="p-4 sm:p-8">
+
+  </footer>)
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={'w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col'}
       >
-        <header></header>
+        {header}
         {children}
-        <footer></footer>
+        {footer}
       </body>
     </html>
   );

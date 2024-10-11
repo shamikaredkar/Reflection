@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    background: linear-gradient(135deg, #FBFFFC, #ECF6EE, #C6E1CD);
+}
+
+/* Custom text gradient utility */
+@layer utilities {
+    .textGradient {
+        background: -webkit-linear-gradient(#23482B, #7FB069);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .green {
+        background-color: #7FB069;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .blackolive {
+        background-color: #363C33;
+        -webkit-background-clip: text;
+    }
+    .babypowder {
+        background-color: #FBFFFC;
+        -webkit-background-clip: text;
+    }
+}
