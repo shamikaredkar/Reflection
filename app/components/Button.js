@@ -9,13 +9,13 @@ const inter = Lora({
 })
 
 export default function Button(props) {
-  const { text, dark } = props
+  const { text, dark, full } = props
 
   return (
     <button
       className={
         'rounded-md overflow-hidden duration-200  relative border-2 border-[#23482B]/30 animation-cloud-btn ' + 
-        (dark ? ' text-[#23482B]' : ' text-[#23482B] btn-gradient')
+        (dark ? ' text-[#23482B]' : ' text-[#23482B]') + (full ? 'grid m-6 place-items-center w-5/12' : '')
       }
     >
       {/* Button content */}
