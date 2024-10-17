@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
   </header>)
 
   const footer = (<footer className="p-4 sm:p-8">
+        <a href="https://storyset.com/people">Illustrations by Storyset</a>
 
   </footer>)
   return (

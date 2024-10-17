@@ -4,7 +4,7 @@
 
 
 body {
-    background: linear-gradient(135deg, #FBFFFC, #ECF6EE, #C6E1CD);
+    background: linear-gradient(135deg, #FBFFFC, #ECF6EE);
 }
 
 /* Custom text gradient utility */
@@ -26,5 +26,38 @@ body {
     .babypowder {
         background-color: #FBFFFC;
         -webkit-background-clip: text;
+    }
+}
+
+.img-height {
+    height: 250px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+/* For larger screens (desktops, large tablets) */
+@media (min-width: 1024px) {
+    .img-height {
+        height: 300px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+}
+
+/* For medium-sized screens (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .img-height {
+        height: 200px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+    }
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+    .img-height {
+        height: 150px;
+        padding-bottom: 10px;
+        padding-left: 10px;
     }
 }
