@@ -1,6 +1,7 @@
 import React from 'react'
 import {Lora} from 'next/font/google'
 import Button from './Button'
+import Calendar from './Calendar'
 
 const inter = Lora({
   subsets: ['latin'], // You can specify other subsets if needed
@@ -49,6 +50,7 @@ export default function Hero() {
         <Button text="sign up"/>
         <Button text="log in" dark/>
       </div>
+      <Calendar/>
     </div>
   )
 }

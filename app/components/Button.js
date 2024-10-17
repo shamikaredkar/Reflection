@@ -4,7 +4,7 @@ import './Button.css';
 
 const inter = Lora({
   subsets: ['latin'], // You can specify other subsets if needed
-  weight: ['400'], // Specify the weights you want to use
+  weight: ['400', '700'], // Specify the weights you want to use
   style: ['normal', 'italic'], // Specify the styles you want to use
 })
 
@@ -19,7 +19,7 @@ export default function Button(props) {
       }
     >
       {/* Button content */}
-      <p className={'px-6 sm:px-10 whitespace-nowrap italic py-3 sm:py-3 z-10 relative ' + inter.className}>
+      <p className={'px-6 sm:px-10 whitespace-nowrap font-bold italic py-3 sm:py-3 z-10 relative ' + inter.className}>
         {text}
       </p>
       
