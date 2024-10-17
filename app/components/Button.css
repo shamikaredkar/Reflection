@@ -1,0 +1,56 @@
+/* Cloud animation parts */
+.animation-cloud-parts {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.animation-cloud-btn-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.animation-cloud-part {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: #C6E1CC;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform .55s;
+}
+
+.animation-cloud-part:nth-child(1) {
+    left: 0;
+    transition-delay: 0s;
+}
+
+.animation-cloud-part:nth-child(2) {
+    left: 30%;
+    transition-delay: 80ms;
+}
+
+.animation-cloud-part:nth-child(3) {
+    left: 60%;
+    transition-delay: .16s;
+}
+
+.animation-cloud-part:nth-child(4) {
+    left: 90%;
+    transition-delay: .24s;
+}
+
+.animation-cloud-btn:hover .animation-cloud-part {
+    transform: translate3d(0, 0%, 0) scale(1.7);
+}
+
+.animation-cloud-btn:hover {
+    opacity: 1;
+    border-color: #C6E1CC;
+}

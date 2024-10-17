@@ -1,5 +1,6 @@
 import React from 'react'
 import {Lora} from 'next/font/google'
+import Button from './Button'
 
 const inter = Lora({
   subsets: ['latin'], // You can specify other subsets if needed
@@ -18,7 +19,7 @@ export default function Hero() {
 {/* Cards Container with Enhanced Glassmorphism */}
       <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
         {/* Card 1 */}
-        <div className='bg-[#5E854C]/30 backdrop-blur-sm shadow-xl border border-[#23482B]/30 rounded-sm p-4 transition-transform transform hover:scale-105 hover:shadow-2xl duration-2000 ease-in-out'>
+        <div className='bg-[#5E854C]/30 backdrop-blur-sm shadow-xl border border-[#23482B]/30 rounded-md p-4 transition-transform transform hover:scale-105 hover:shadow-2xl duration-2000 ease-in-out'>
           <img src='/images/depression.gif'/>
           <h4 className='font-bold text-lg text-center blackolive italic'>release your thoughts</h4>
           <p className='mt-2 text-[#FBFFFC] text-center'>
@@ -27,7 +28,7 @@ export default function Hero() {
         </div>
 
         {/* Card 2 */}
-        <div className='bg-[#5E854C]/30 backdrop-blur-sm shadow-xl border border-[#23482B]/30 rounded-sm p-4 transition-transform transform hover:scale-105 hover:shadow-2xl duration-2000 ease-in-out'>
+        <div className='bg-[#5E854C]/30 backdrop-blur-sm shadow-xl border border-[#23482B]/30 rounded-md p-4 transition-transform transform hover:scale-105 hover:shadow-2xl duration-2000 ease-in-out'>
         <img src='/images/diary.gif'/>
           <h4 className='font-bold text-lg text-center blackolive italic'>record your feelings</h4>
           <p className='mt-2 text-[#FBFFFC] text-center'>
@@ -36,13 +37,17 @@ export default function Hero() {
         </div>
 
         {/* Card 3 */}
-        <div className='bg-[#5E854C]/30 backdrop-blur-sm shadow-xl border border-[#23482B]/30 rounded-sm p-4  transition-transform transform hover:scale-105 hover:shadow-2xl duration-2000 ease-in-out'>
+        <div className='bg-[#5E854C]/30 backdrop-blur-sm shadow-xl border border-[#23482B]/30 rounded-md p-4  transition-transform transform hover:scale-105 hover:shadow-2xl duration-2000 ease-in-out'>
         <img className='img-height' src='/images/growth.gif'/>
-          <h4 className='pt-3 font-bold text-lg text-center blackolive italic'>reflect on your growth</h4>
+          <h4 className='font-bold text-lg text-center blackolive italic'>reflect on your growth</h4>
           <p className='mt-2 text-[#FBFFFC] text-center'>
             read your past entries and see how far you've come.
           </p>
         </div>
+      </div>
+      <div className='grid grid-cols-2 gap-4 pt-8'>
+        <Button text="sign up"/>
+        <Button text="log in" dark/>
       </div>
     </div>
   )
