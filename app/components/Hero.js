@@ -50,7 +50,7 @@ export default function Hero() {
         <Button text="sign up"/>
         <Button text="log in" dark/>
       </div>
-      <Calendar/>
+      {/* <Calendar/> */}
     </div>
   )
 }
